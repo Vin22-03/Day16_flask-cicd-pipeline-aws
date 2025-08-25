@@ -11,4 +11,4 @@ COPY . .
 EXPOSE 8080
 
 # Run with gunicorn in containers (prod-friendly)
-CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:8080", "app:app"]
+CMD ["gunicorn", "-w", "2", "-b", "0.0.0.0:8080", "app:app", "--timeout", "90"]
